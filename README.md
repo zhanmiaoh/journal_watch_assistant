@@ -35,7 +35,7 @@ TIMEOUT_SECONDS=120
 - Europe PMC (full text; not wired into the pipeline yet)
 
 ### Run
-Main entry script: `python lab_paper_tracker_openai.py`
+Main entry script: `python paper_tracker_main.py`
 
 Output documents:
 - Log (.txt): reasoning and outputs. It is recommended to review logs to validate accuracy.

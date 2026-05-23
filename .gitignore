@@ -9,8 +9,8 @@ logs/*
 !logs/api_log_2026-05-22-02-10.txt
 
 # Reports: keep only 2026-05-22
-Lab_Meeting_Report_*.md
-!Lab_Meeting_Report_2026-05-22.md
+Journal_Watch_Report_*.md
+!Journal_Watch_Report_2026-05-22.md
 
 journal_watch_list_*.docx
 todo.md

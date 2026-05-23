@@ -5,6 +5,7 @@ import feedparser
 import time
 from openai import OpenAI
 from dotenv import load_dotenv
+
 from rss_sources import TEST_RSS_FEEDS as RSS_FEEDS
 from system_prompt import PRE_FILTER_KEYWORDS, SYSTEM_PROMPT
 from fetch_source import get_full_abstract_from_crossref, get_full_text_from_pmc, extract_doi
@@ -238,7 +239,7 @@ def fetch_rss_journals(write_report, log_call):
 # ==========================================
 def main():
     print("🚀 Starting Automated Literature Briefing Pipeline...")
-    filename = f"Lab_Meeting_Report_{today.strftime('%Y-%m-%d')}.md"
+    filename = f"Journal_Watch_Report_{today.strftime('%Y-%m-%d')}.md"
     log_filename = f"logs/api_log_{datetime.datetime.now().strftime('%Y-%m-%d-%H-%M')}.txt"
     report_count = 0
     log_count = 0
