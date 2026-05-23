@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+.env
+
+# Logs: keep only one snapshot
+logs/*
+!logs/api_log_2026-05-22-02-10.txt
+
+# Reports: keep only 2026-05-22
+Lab_Meeting_Report_*.md
+!Lab_Meeting_Report_2026-05-22.md
+
+journal_watch_list_*.docx
+todo.md
+test.ipynb
+lab_paper_tracker_ge.py
