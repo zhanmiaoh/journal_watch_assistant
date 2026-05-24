@@ -36,8 +36,8 @@ client = OpenAI(api_key=API_KEY, base_url=BASE_URL, timeout=TIMEOUT_SECONDS)
 
 # 设置 BioRxiv 检索的日期范围 (动态获取本月 11号 - 20号)
 today = datetime.date.today()
-START_DATE = today.replace(day = 1).strftime("%Y-%m-%d")
-END_DATE = today.replace(day = 2).strftime("%Y-%m-%d")
+START_DATE = today.replace(day = 11).strftime("%Y-%m-%d")
+END_DATE = today.replace(day = 20).strftime("%Y-%m-%d")
 # START_DATE = datetime.date(2026, 4, 11)
 # END_DATE = datetime.date(2026, 4, 20)
 
@@ -50,20 +50,6 @@ RSS_USE_DATE_RANGE = False  # False: 用最新 20 篇
 # RSS_START_DATE = today - datetime.timedelta(days=7)  # 默认最近一周内的文章
 # _this_monday = today - datetime.timedelta(days=today.weekday())
 # RSS_START_DATE = _this_monday - datetime.timedelta(days=7)
-
-
-# 日期过滤逻辑示例（以 11日-20日 为例）
-# from datetime import datetime
-
-# for entry in feed.entries:
-#     # 拿到文章发布的具体日子 (day)
-#     # bioRxiv 的 entry 通常包含 published_parsed 或 updated_parsed 结构
-#     if hasattr(entry, 'published_parsed'):
-#         pub_day = entry.published_parsed.tm_mday
-        
-#         if 11 <= pub_day <= 20:
-#             # 满足日期，送给 Kimi/DeepSeek 总结
-#             pass
 
 
 # ==========================================

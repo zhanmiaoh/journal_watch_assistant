@@ -21,11 +21,6 @@ Install required packages:
 pip install -r requirements.txt
 ```
 
-You need an API key for an LLM model. This example uses Deepseek: https://api-docs.deepseek.com/zh-cn/, compatible with the OpenAI client.
-
-- Deepseek is also compatible with the Anthropic client: https://api-docs.deepseek.com/zh-cn/guides/anthropic_api.
-- A Gemini API format is included and requires only minimal replacement.
-
 Create a `.env` file (rename from `.env.example`) and fill in your API key:
 
 ```bash
@@ -40,6 +35,13 @@ BASE_URL = https://api.deepseek.com
 MODEL_NAME = deepseek-v4-flash
 TIMEOUT_SECONDS = 120
 ```
+
+You need an API key for an LLM model. This example uses Deepseek: https://api-docs.deepseek.com/zh-cn/, compatible with the OpenAI client.
+
+- Deepseek is also compatible with the Anthropic client: https://api-docs.deepseek.com/zh-cn/guides/anthropic_api.
+- A Gemini API format is included and requires only minimal replacement.
+
+
 
 Recommended settings: 
 deepseek-v4-flash, reasoning enabled, reasoning_effort=high (see https://api-docs.deepseek.com/zh-cn/guides/thinking_mode). The cost is under ¥1 for a week of journal and bioRxiv scans (monitor at https://platform.deepseek.com/usage).

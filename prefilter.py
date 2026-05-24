@@ -49,3 +49,17 @@ def prefilter_rss_relevance(client, model_name, title, abstract, url, journal):
 		print(f"RSS prefilter error for {title}: {e}")
 		time.sleep(2)
 		return "ERROR", "", ""
+
+
+# 日期过滤逻辑示例（以 11日-20日 为例）
+# from datetime import datetime
+
+# for entry in feed.entries:
+#     # 拿到文章发布的具体日子 (day)
+#     # bioRxiv 的 entry 通常包含 published_parsed 或 updated_parsed 结构
+#     if hasattr(entry, 'published_parsed'):
+#         pub_day = entry.published_parsed.tm_mday
+        
+#         if 11 <= pub_day <= 20:
+#             # 满足日期，送给 Kimi/DeepSeek 总结
+#             pass
