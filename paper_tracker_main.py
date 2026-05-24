@@ -36,8 +36,8 @@ client = OpenAI(api_key=API_KEY, base_url=BASE_URL, timeout=TIMEOUT_SECONDS)
 
 # 设置 BioRxiv 检索的日期范围 (动态获取本月 11号 - 20号)
 today = datetime.date.today()
-START_DATE = today.replace(day = 11).strftime("%Y-%m-%d")
-END_DATE = today.replace(day = 20).strftime("%Y-%m-%d")
+START_DATE = today.replace(day = 1).strftime("%Y-%m-%d")
+END_DATE = today.replace(day = 2).strftime("%Y-%m-%d")
 # START_DATE = datetime.date(2026, 4, 11)
 # END_DATE = datetime.date(2026, 4, 20)
 
@@ -282,7 +282,7 @@ def main():
             f.flush()
             report_count += 1
 
-        # fetch_biorxiv(write_report, log_call)
+        fetch_biorxiv(write_report, log_call)
         fetch_rss_journals(write_report, log_call)
 
     if report_count == 0:
